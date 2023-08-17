@@ -32,7 +32,7 @@ h5,
 p,
 figure,
 picture {
-    margin: 0; 
+    margin: 0;
 }
 
 /* set up the body */
@@ -57,15 +57,16 @@ select {
 }
 
 /* remove animations for people who've turned them off */
-@media (prefers-reduced-motion: reduce) {  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 
@@ -92,25 +93,44 @@ select {
 }
 
 .sr-only {
-  position: absolute; 
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px; 
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    /* added line */
+    border: 0;
 }
 
 /* colors */
 
-.bg-dark { background-color: hsl( var(--clr-dark) );}
-.bg-accent { background-color: hsl( var(--clr-light) );}
-.bg-white { background-color: hsl( var(--clr-white) );}
+.bg-dark {
+    background-color: hsl(var(--clr-dark));
+}
 
-.text-dark { color: hsl( var(--clr-dark) );}
-.text-accent { color: hsl( var(--clr-light) );}
-.text-white { color: hsl( var(--clr-white) );}
+.bg-accent {
+    background-color: hsl(var(--clr-light));
+}
 
+.bg-white {
+    background-color: hsl(var(--clr-white));
+}
 
+.text-dark {
+    color: hsl(var(--clr-dark));
+}
+
+.text-accent {
+    color: hsl(var(--clr-light));
+}
+
+.text-white {
+    color: hsl(var(--clr-white));
+}
+
+.example-component {
+    background-color: hsl(var(--clr-light) / .2);
+}
