@@ -95,6 +95,8 @@ body {
 
     display: grid;
     grid-template-rows: min-content 1fr;
+
+    overflow: hidden;
 }
 
 /* make images easier to work with */
@@ -356,12 +358,76 @@ select {
 }
 
 .primary-navigation {
-    --gap: 8rem;
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
+    background: hsl(var(--clr-dark) / .95);
+    /* glass morphism */
+    /* backdrop-filter: blur(1.5rem); */
 }
+
+@supports (backdrop-filter: blur(1.5rem)) {
+    .primary-navigation {
+        background: hsl(var(--clr-white) / .05);
+        backdrop-filter: blur(1.5rem);
+    }
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 35em) {
+    .primary-navigation {
+        --underline-gap: .5rem;
+        padding-inline: 3rem;
+        /* min() picks the smaller value */
+        padding-block: min(20rem, 15vh);
+        /* margin: 0; */
+        flex-direction: column;
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        transform: translateX(100%);
+        transition: transform .5s ease-in-out
+    }
+
+    .primary-navigation[data-visible="true"]{
+        transform: translateX(0);
+    }
+
+    .primary-navigation.underline-indicators>.active {
+        border: 0;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        border: 0;
+        background-image: url(./assets/shared/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 1.5rem;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"]{
+        background-image: url(./assets/shared/icon-close.svg);
+    }
+
+    .mobile-nav-toggle:focus-visible {
+        outline: 5px solid white;
+        outline-offset: 5px;
+    }
+}
+
+
 
 .primary-navigation a {
     text-decoration: none;
@@ -372,12 +438,14 @@ select {
     margin-right: .5em;
 }
 
-.underline-indicators>* {
+
+.primary-navigation.underline-indicators>* {
     cursor: pointer;
     padding: var(--underline-gap, 1rem) 0;
     border: 0;
     border-bottom: .2rem solid hsl(var(--clr-white) / 0);
 }
+
 
 .underline-indicators>*:hover,
 .underline-indicators>*:focus {
@@ -429,7 +497,7 @@ body {
 
 @media (min-width: 35em) {
     .home {
-        background-position: center;
+        background-position: center center;
         background-image: url(./assets/home/background-home-tablet.jpg);
     }
 }
