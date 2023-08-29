@@ -84,6 +84,18 @@ p {
     font-weight: 400;
 }
 
+/* Accessibility */
+/* a:hover,
+input:hover,
+button:hover,
+select:hover,
+a:focus,
+input:focus,
+button:focus,
+select:focus {
+    font-weight: bold;
+} */
+
 /* set up the body */
 body {
     font-family: var(--ff-sans-normal);
@@ -201,6 +213,21 @@ select {
     white-space: nowrap;
     /* added line */
     border: 0;
+}
+
+.skip-to-content {
+    position: absolute;
+    z-index: 9999;
+    background: hsl(var(--clr-white));
+    color: hsl(var(--clr-dark));
+    padding: .5em 1em;
+    margin-inline: auto;
+    transform: translateY(-101%);
+    transition: transform .250s ease-in-out;
+}
+
+.skip-to-content:focus {
+    transform: translateY(0);
 }
 
 /* colors */
