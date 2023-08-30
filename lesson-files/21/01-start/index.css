@@ -373,6 +373,12 @@ select {
     transform: scale(1.5);
 }
 
+/* Images */
+.planet {
+    aspect-ratio: 1;
+}
+
+
 /* primary-header */
 
 .logo {
@@ -498,7 +504,7 @@ select {
     }
 }
 
-.primary-navigation.underline-indicators>* {
+.underline-indicators>* {
     cursor: pointer;
     padding: var(--underline-gap, 1rem) 0;
     border: 0;
