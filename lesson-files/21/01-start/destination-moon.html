@@ -75,16 +75,14 @@
 				</ul>
 			</nav>
 		</header>
-		<main id="main" class="grid-container-XXXXX grid-container--destination">
+		<main id="main" class="grid-container grid-container--destination flow">
 			<h1 class="numbered-title">
-				<span>01</span> Pick your destination
+				<span aria-hidden="true">01</span> Pick your destination
 			</h1>
 			<img
 				class="planet"
 				src="./assets/destination/image-moon.webp"
-				alt="half-lit moon"
-				width="200"
-				height="auto" />
+				alt="half-lit moon" />
 			<!-- Tabs -->
 			<div class="tab-list underline-indicators flex">
 				<button
@@ -108,18 +106,31 @@
 					Titan
 				</button>
 			</div>
-			<p class="fs-700 ff-serif uppercase">Moon</p>
-			<p class="text-accent fs-400">
-				See our planet as you've never seen it before. A perfect relaxing trip
-				away to help regain perspective and come back refreshed. While you're
-				there, take in some history by visiting the Luna 2 and Apollo 11 landing
-				sites.
-			</p>
-			<p class="ff-sans-cond uppercase letter-spacing-3">Avg. distance</p>
-            <p class="fs-500 ff-serif uppercase">384,400 km</p>
-            <p class="ff-sans-cond uppercase letter-spacing-3">Est. travel time</p>
-            <p class="ff-serif fs-500 uppercase">3 days</p>
-			 
+			<article class="destination-info">
+				<h2 class="fs-800 ff-serif uppercase">Moon</h2>
+				<p class="text-accent fs-400 max-width-50ch">
+					See our planet as you've never seen it before. A perfect relaxing trip
+					away to help regain perspective and come back refreshed. While you're
+					there, take in some history by visiting the Luna 2 and Apollo 11
+					landing sites.
+				</p>
+				<div class="destination-meta flex">
+					<div>
+						<h3
+							class="ff-sans-cond fs-200 text-accent uppercase letter-spacing-3">
+							Avg. distance
+						</h3>
+						<p class="ff-serif uppercase">384,400 km</p>
+					</div>
+					<div>
+						<h3
+							class="ff-sans-cond fs-200 text-accent uppercase letter-spacing-3">
+							Est. travel time
+						</h3>
+						<p class="ff-serif uppercase">3 days</p>
+					</div>
+				</div>
+			</article>
 		</main>
 	</body>
 </html>
