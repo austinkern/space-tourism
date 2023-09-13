@@ -19,6 +19,6 @@ navToggle.addEventListener('click', () => handleMobileNavToggle());
 
 //tabs
 
-const tabs = document.querySelector('.tab-list');
+const tabList = document.querySelector('[role="tablist"]');
 
-// console.log(tabs);
+// console.log(tabList);
