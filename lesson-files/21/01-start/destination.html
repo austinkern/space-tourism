@@ -99,7 +99,7 @@
 			class="grid-container grid-container--destination flow">
 			<h1 class="numbered-title"><span aria-hidden="true">01</span> Pick your destination</h1>
 			<!-- images  -->
-			<picture>
+			<picture id="moon-image">
 				<source
 					srcset="./assets/destination/image-moon.webp"
 					type="image-webp" />
@@ -110,7 +110,9 @@
 					src="./assets/destination/image-moon.webp"
 					alt="the moon" />
 			</picture>
-			<picture hidden>
+			<picture
+				id="mars-image"
+				hidden>
 				<source
 					srcset="./assets/destination/image-mars.webp"
 					type="image-webp" />
@@ -121,7 +123,9 @@
 					src="./assets/destination/image-mars.webp"
 					alt="the planet mars" />
 			</picture>
-			<picture hidden>
+			<picture
+				id="europa-image"
+				hidden>
 				<source
 					srcset="./assets/destination/image-europa.webp"
 					type="image-webp" />
@@ -132,7 +136,9 @@
 					src="./assets/destination/image-europa.webp"
 					alt="the planet europa" />
 			</picture>
-			<picture hidden>
+			<picture
+				id="titan-image"
+				hidden>
 				<source
 					srcset="./assets/destination/image-titan.webp"
 					type="image-webp" />
@@ -153,6 +159,7 @@
 					role="tab"
 					aria-controls="moon-tab"
 					tabindex="0"
+					data-image="moon-image"
 					class="uppercase text-accent letter-spacing-2 ff-sans-cond">
 					Moon
 				</button>
@@ -161,6 +168,7 @@
 					role="tab"
 					aria-controls="mars-tab"
 					tabindex="-1"
+					data-image="mars-image"
 					class="uppercase text-accent letter-spacing-2 ff-sans-cond">
 					Mars
 				</button>
@@ -169,6 +177,7 @@
 					role="tab"
 					aria-controls="europa-tab"
 					tabindex="-1"
+					data-image="europa-image"
 					class="uppercase text-accent letter-spacing-2 ff-sans-cond">
 					Europa
 				</button>
@@ -177,6 +186,7 @@
 					role="tab"
 					aria-controls="titan-tab"
 					tabindex="-1"
+					data-image="titan-image"
 					class="uppercase text-accent letter-spacing-2 ff-sans-cond">
 					Titan
 				</button>
@@ -185,7 +195,7 @@
 			<article
 				class="destination-info"
 				id="moon-tab"
-                role="tabpanel"
+				role="tabpanel"
 				tabindex="0">
 				<header class="flow flow--space-small">
 					<h2 class="fs-800 ff-serif uppercase">Moon</h2>
@@ -210,7 +220,7 @@
 			<article
 				class="destination-info"
 				id="mars-tab"
-                role="tabpanel"
+				role="tabpanel"
 				tabindex="0"
 				hidden>
 				<header class="flow flow--space-small">
@@ -235,7 +245,7 @@
 			<article
 				class="destination-info"
 				id="europa-tab"
-                role="tabpanel"
+				role="tabpanel"
 				tabindex="0"
 				hidden>
 				<header class="flow flow--space-small">
@@ -261,7 +271,7 @@
 			<article
 				class="destination-info"
 				id="titan-tab"
-                role="tabpanel"
+				role="tabpanel"
 				tabindex="0"
 				hidden>
 				<header class="flow flow--space-small">
