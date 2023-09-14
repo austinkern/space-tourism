@@ -1,4 +1,4 @@
-// navigation
+// navigation ==================================================
 
 const nav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
@@ -17,7 +17,7 @@ const handleMobileNavToggle = () => {
 
 navToggle.addEventListener('click', handleMobileNavToggle);
 
-//tabs
+//tabs ==================================================
 
 const tabList = document.querySelector('[role="tablist"]');
 const tabs = tabList.querySelectorAll('[role="tab"]');
