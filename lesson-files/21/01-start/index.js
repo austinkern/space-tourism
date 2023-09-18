@@ -1,4 +1,4 @@
-// navigation ==================================================
+// Navigation ==================================================
 
 const nav = document.querySelector('.primary-navigation');
 const navToggle = document.querySelector('.mobile-nav-toggle');
@@ -17,7 +17,7 @@ const handleMobileNavToggle = () => {
 
 navToggle.addEventListener('click', handleMobileNavToggle);
 
-//tabs ==================================================
+// Tabs ==================================================
 
 const tabList = document.querySelector('[role="tablist"]');
 const tabs = tabList.querySelectorAll('[role="tab"]');
@@ -64,20 +64,22 @@ function changeTabPanel(e) {
 	const mainContainer = tabContainer.parentNode;
 
 	const hideContent = (parent, contentToHide) => {
-		parent.querySelectorAll(contentToHide).forEach((item) => item.setAttribute('hidden', 'hidden'));
+		parent.querySelectorAll(contentToHide).forEach((item) => item.setAttribute('hidden', ''));
 	};
 
 	const showContent = (parent, itemToQuery) => {
 		parent.querySelector(`#${itemToQuery}`).removeAttribute('hidden');
 	};
 
-	//deselect the current tab, and activate target tab
-	tabContainer.querySelector('[aria-selected="true"]').setAttribute('aria-selected', 'false');
-	targetTab.setAttribute('aria-selected', true);
-
 	hideContent(mainContainer, '[role="tabpanel"]');
 	showContent(mainContainer, targetPanel);
 
 	hideContent(mainContainer, 'picture');
 	showContent(mainContainer, targetImage);
+
+	//deselect the current tab, and activate target tab
+	tabContainer.querySelector('[aria-selected="true"]').setAttribute('aria-selected', 'false');
+	targetTab.setAttribute('aria-selected', true);
 }
+
+// Dots ==================================================
