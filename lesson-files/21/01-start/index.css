@@ -733,8 +733,7 @@ body {
         ;
     }
 
-    .grid-container--destination > picture,
-    .grid-container--crew > picture {
+    .grid-container--destination > picture {
         max-width: 90%;
     }
 
@@ -759,6 +758,8 @@ body {
     }
 
     .grid-container--crew > picture {
-        align-self: center;
+        align-self: end;
+        grid-column: span 2;
+        max-width: 100%
     }
 }
